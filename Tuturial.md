@@ -330,7 +330,7 @@ then add one more and select the MissionQuestions class and mission questions ta
 
 ### Now you can see if it works
 Run your website, type /missions at the end of the url to see if it connect to a table. Try clicking create and make a new mission
-The same thing should work with /users and /missioQuestions
+The same thing should work with /users and /missionQuestions
 
 
 
