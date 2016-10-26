@@ -1,0 +1,31 @@
+/****CREATE A DATABASE CALLED MISSION AND THEN CREATE THESE TABLES. CLUCK UPDATE IN THE TOP LEFT HAND CORNER AFTER EACH ONE***/
+/**** MISSIONS TABLE ****/
+CREATE TABLE [dbo].[Missions] (
+/***HIS TUTURIAL SAYS TO PUT PRIMARY KEY BUT IF YOU PUT IDENTITY LIKE THIS YOU WONT HAVE ANY ERRORS, i TALKED TO HIM ABOUT THIS AND HE SAID IT LOOKS GOO **/
+    [missionID]       INT          IDENTITY (1, 1) NOT NULL,
+    [missionName]     VARCHAR (50) NOT NULL,
+    [missionPresName] VARCHAR (30) NOT NULL,
+    [missionLanguage] VARCHAR (30) NOT NULL,
+    [missionClimate]  VARCHAR (30) NOT NULL,
+    [missionReligion] VARCHAR (30) NOT NULL,
+    [missionImg]      VARCHAR (30) NOT NULL,
+    PRIMARY KEY CLUSTERED ([missionID] ASC)
+);
+/****** USERS TABLE*******/
+CREATE TABLE [dbo].[Users] (
+    [userID]    INT          IDENTITY (1, 1) NOT NULL,
+    [userEmail] VARCHAR (50) NOT NULL,
+    [userPass]  VARCHAR (30) NOT NULL,
+    [userFirst] VARCHAR (20) NOT NULL,
+    [userLast]  VARCHAR (20) NOT NULL,
+    PRIMARY KEY CLUSTERED ([userID] ASC)
+);
+/****** MISSION QUESTIONS TABLE ********/
+CREATE TABLE [dbo].[MissionQuestions] (
+    [MissionQuestionId] INT           IDENTITY (1, 1) NOT NULL,
+    [missionID]         INT           NOT NULL,
+    [UserID]            INT           NOT NULL,
+    [missQuestion]      VARCHAR (MAX) NOT NULL,
+    [missAnswer]        VARCHAR (MAX) NULL,
+    PRIMARY KEY CLUSTERED ([MissionQuestionId] ASC)
+);
