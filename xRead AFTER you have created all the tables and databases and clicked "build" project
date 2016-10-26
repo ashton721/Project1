@@ -1,0 +1,8 @@
+ AFTER you have created all the tables and databases and clicked "build" project
+Then you can have it auto-create your views and your controllers. 
+Just right click on the controllers folder, click add > new scaffolded item
+Click " MVC Controller with views using entity framework"
+Then select which model and which database table to create one for
+you have to do these one at a time. so select the missions table and the mission class
+then add a new one and select the users table and the users class
+then add one more and select the MissionQuestions class and mission questions table
