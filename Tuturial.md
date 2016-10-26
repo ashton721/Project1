@@ -37,7 +37,7 @@
 - Right mouse click on Tables and choose Add New Table
 - In the Database name type Mission and click on the OK button
 - Copy and paste the following script:
-/**** MISSIONS TABLE ****/
+### MISSIONS TABLE 
 ```sql
 
 CREATE TABLE [dbo].[Missions] (
@@ -58,18 +58,10 @@ CREATE TABLE [dbo].[Missions] (
 - Click on the Update tab
 - Click on the Update Database button	NOTE: The table is now created
 - Repeat this process for the following table structures:
-
+### Users Table
 ```sql
-CREATE TABLE [dbo].[Player]
-(
-  [playerID] INT NOT NULL PRIMARY KEY, 
-  [playerLastName] VARCHAR(30) NOT NULL, 
-  [playerFirstName] VARCHAR(30) NOT NULL, 
-  [positionCode] VARCHAR(2) NOT NULL, 
-  [teamID] INT 
-)
 
-/****** USERS TABLE*******/
+
 CREATE TABLE [dbo].[Users] (
     [userID]    INT          IDENTITY (1, 1) NOT NULL,
     [userEmail] VARCHAR (50) NOT NULL,
@@ -78,7 +70,10 @@ CREATE TABLE [dbo].[Users] (
     [userLast]  VARCHAR (20) NOT NULL,
     PRIMARY KEY CLUSTERED ([userID] ASC)
 );
-/****** MISSION QUESTIONS TABLE ********/
+```
+### Mission Questions Table
+```sql
+
 CREATE TABLE [dbo].[MissionQuestions] (
     [MissionQuestionId] INT           IDENTITY (1, 1) NOT NULL,
     [missionID]         INT           NOT NULL,
